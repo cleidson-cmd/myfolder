@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar um ponto de coleta</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Ubunto:display=swap" rel="stylesheet">
+    <!--aqui na fonte 2 fontes ex: family=fonte1&family = font2 e segue o link como acima-->
+
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/create-point.css">
+    <link rel="stylesheet" href="/style/responsive.css">
+
+
+</head>
+<body>
+
+    <div id="page-create-point"> <!--div com id que tem que ser unico de dentro dela tem outra dive ou seja um block dentro de outro-->
+        
+        <header><!--aqui posso deixar um ao lado do outro etc.esse "sub_block" esta sendo alinhado no css-->
+                <img src="/icones/logo.svg" alt = "logomarca"> <!--inserino imagem de logo com legenda logomarca-->
+    
+                <a href = "http://google.com.br">
+                    <span> </span> <!--posso digitar um text ou mensagem aqui mais vou pelo css-->
+                    Voltar para home
+                </a> <!--transformando em link--> 
+        </header>
+
+        <form ction = "">
+
+            <h1>Cadastro do ponto de coleta</h1>
+
+            <fieldset> <!--agrupar boxs por exemplo ou coleçao de campos-->
+  
+                <legend>
+                    <h2>Dados da entidade</h2>
+                </legend>
+
+                <div class="field">
+                    <label for = "name">Nome da entidade</label>
+                    <input type="text" name = "name" required><!--required = info obigatorio para enviar o questionario-->
+                </div>                                         <!--ou seja tem que preencher esta informaçao-->
+
+                <div class = "field-group"><!--field = campos e group = grpo ou seja agrupamento de campos-->
+                    <!--aqui dentro posso ter mais de um field por conta do field-group que permite-->
+                    <!--se colocar .field*2 por exeplo ele cria 2 field pra mim e label+input para criar ambos-->
+                    <div class="field">
+                        <label for="address">Endereço</label>
+                        <input type="text" name ="address" required>
+                    </div>
+                    
+                    <div class="field">
+                        <label for="address2">Numero/Complemento</label>
+                        <input type="text" name ="address2" required>
+                    </div>
+
+                </div>
+
+                <div class = "field-group">
+                    <div class="field">
+                        <label for="state">Estado</label>
+                        <select name="uf" id="" required>
+                            <option value="">Selecione o Estado</option>    
+                        </select>
+                        <input type = "hidden" name = "state">
+                    </div>
+                    
+                    <div class="field">
+                        <label for="city">Cidade</label>
+                        <select name="city" id="" disabled required>
+                            <option value="">Selecione a Cidade</option>
+                        </select>
+                    </div>
+
+                </div>
+
+            </fieldset>       
+            <fieldset>
+
+                <legend>
+                    <h2>Itens de coleta</h2>
+                </legend>
+
+                <div class = "items-grid"><!--esse-->
+                    <li data-id = "1"><!-- li = listas id = identificador para trabalhar com css ou j.s referenciando este item -->
+                        <img src = "/icones/lampadas.svg" alt = "Lâmpadas">
+                        <span>Lâmpadas</span>
+                    </li>
+
+                    <li data-id = "2"><!-- li = listas id = identificador para trabalhar com css ou j.s referenciando este item -->
+                        <img src = "/icones/baterias.svg" alt = "Pilhas e Baterias">
+                        <span>Pilhas e Baterias</span> <!--2 clik no texto e Ctrl + d ele mostra o proximo item igual para poder apagar e alterar simutaneamente os 2 ou mais-->
+                    </li>
+
+                    <li data-id = "3"><!-- li = listas id = identificador para trabalhar com css ou j.s referenciando este item -->
+                        <img src = "/icones/papeis-papelao.svg" alt = "Papéis e Papelão">
+                        <span>Papéis e Papelão</span>
+                    </li>
+
+                    <li data-id = "4"><!-- li = listas id = identificador para trabalhar com css ou j.s referenciando este item -->
+                        <img src = "/icones/eletronicos.svg" alt = "Residuos Eletrônicos">
+                        <span>Residuos Eletrônicos</span>
+                    </li>
+
+                    <li data-id = "5"><!-- li = listas id = identificador para trabalhar com css ou j.s referenciando este item -->
+                        <img src = "/icones/organicos.svg" alt = "Residuos Orgânicos">
+                        <span>Residuos Orgânicos</span>
+                    </li>
+
+                    <li data-id = "6"><!-- li = listas id = identificador para trabalhar com css ou j.s referenciando este item -->
+                        <img src = "/icones/oleo.svg" alt = "Óleo de Cozinha">
+                        <span>Óleo de Cozinha</span>
+                    </li><!--toda lista mostra um pontinho do lado tipo indices-->
+                </div>
+                
+                <input type = "hidden" name = "items">
+
+            </fieldset>
+
+           <button type = submit>Cadastrar ponto de coleta</button> 
+        </form>        
+
+    </div>
+
+    <script src = "/scripts/create-point.js"></script><!--add um script do java script-->
+</body>
+</html>
+
+
+
+
+
